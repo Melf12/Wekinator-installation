@@ -34,7 +34,7 @@ void setup() {
   myFont = createFont("Arial", 14);
   myBigFont = createFont("Arial", 80);
 }
-
+//draw, med baggrundsopdatering, hvor farven ændres altefter hvad variablen "currentHue" er. Det er også her vi kalder drawText.
 void draw() {
   frameRate(30);
   background(currentHue, 255, 255);
@@ -53,7 +53,7 @@ void oscEvent(OscMessage theOscMessage) {
     }
  
 }
-
+//Her tager vi vores osc besked og generere farven på baggrunden.
 void showMessage(int i) {
     currentHue = (int)generateColor(i);
     currentTextHue = (int)generateColor((i+1));
